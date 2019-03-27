@@ -173,7 +173,7 @@ public class ControlUsuarios extends javax.swing.JDialog {
 
         boolean val = true;
 
-        if (!jTextFieldUsu.getText().trim().toLowerCase().matches("alumno")) {
+        if (!jTextFieldUsu.getText().trim().toLowerCase().matches("sortkrage")) {
 
             val = false;
 
