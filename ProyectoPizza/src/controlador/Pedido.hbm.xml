@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 05-feb-2019 13:05:42 by Hibernate Tools 4.0.1.Final -->
+
+<hibernate-mapping>
+    <class name="controlador.Pedido" table="Pedido" catalog="ProyectoPizza">
+        <id name="idPedido" type="int">
+            <column name="idPedido" />
+            <generator class="assigned" />
+        </id>
+        <property name="cliente" type="int">
+            <column name="idCliente" />
+        </property>
+        <property name="empleado" type="int">
+            <column name="idEmpleado" />
+        </property>
+        <property name="fecha" type="date">
+            <column name="fecha" length="10" />
+        </property>
+        <property name="importe" type="java.lang.Double">
+            <column name="importe" precision="22" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

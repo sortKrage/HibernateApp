@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 05-feb-2019 13:05:42 by Hibernate Tools 4.0.1.Final -->
+<hibernate-mapping>
+    <class name="controlador.Articulo" table="Articulo" catalog="ProyectoPizza">
+        <id name="idArticulo" type="int">
+            <column name="idArticulo" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="Nombre" />
+        </property>
+        <property name="descripcion" type="string">
+            <column name="Descripcion" />
+        </property>
+        <property name="precio" type="java.lang.Double">
+            <column name="Precio" precision="22" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 05-feb-2019 13:05:42 by Hibernate Tools 4.0.1.Final -->
+<hibernate-mapping>
+    <class name="controlador.Empleado" table="Empleado" catalog="ProyectoPizza">
+        <id name="idEmpleado" type="int">
+            <column name="idEmpleado" />
+            <generator class="assigned" />
+        </id>
+        
+        <many-to-one name="puesto" class="controlador.Puesto" fetch="select">
+            <column name="idPuesto"/>
+        </many-to-one>
+        
+        <property name="nombre" type="string">
+            <column name="Nombre" />
+        </property>
+        <property name="ape1" type="string">
+            <column name="Ape1" />
+        </property>
+        <property name="ape2" type="string">
+            <column name="Ape2" />
+        </property>
+        <property name="minutos" type="long">
+            <column name="Minutos" />
+        </property>
+    </class>
+</hibernate-mapping>

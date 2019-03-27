@@ -1,0 +1,4 @@
+LA CONTRASEÑA Y EL NOMBRE DE USUARIO PARA ENTRAR EN LA APLICACIÓN ES:
+
+Usuario: alumno
+Contraseña: manager
