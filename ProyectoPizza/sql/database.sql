@@ -1,8 +1,8 @@
--- MySQL dump 10.16  Distrib 10.1.37-MariaDB, for debian-linux-gnu (x86_64)
+-- MySQL dump 10.16  Distrib 10.1.38-MariaDB, for debian-linux-gnu (x86_64)
 --
 -- Host: localhost    Database: ProyectoPizza
 -- ------------------------------------------------------
--- Server version	10.1.37-MariaDB-0+deb9u1
+-- Server version	10.1.38-MariaDB-0+deb9u1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -81,7 +81,7 @@ CREATE TABLE `Empleado` (
   `Nombre` varchar(255) DEFAULT NULL,
   `Ape1` varchar(255) DEFAULT NULL,
   `Ape2` varchar(255) DEFAULT NULL,
-  `Horas` int(11) DEFAULT NULL,
+  `Minutos` int(11) DEFAULT '0',
   PRIMARY KEY (`idEmpleado`),
   KEY `Empleado_Puesto_FK` (`idPuesto`),
   CONSTRAINT `Empleado_Puesto_FK` FOREIGN KEY (`idPuesto`) REFERENCES `Puesto` (`idPuesto`) ON UPDATE CASCADE
@@ -94,7 +94,7 @@ CREATE TABLE `Empleado` (
 
 LOCK TABLES `Empleado` WRITE;
 /*!40000 ALTER TABLE `Empleado` DISABLE KEYS */;
-INSERT INTO `Empleado` VALUES (1,1,'David','García','Gareau',0),(2,2,'Cristina','Hernández','Portada',0),(3,3,'Daniel','Ortiz','Vallejuelo',0),(4,4,'Narcisa','de Miguel','González',0);
+INSERT INTO `Empleado` VALUES (1,1,'David','García','Gareau',78),(2,2,'Cristina','Hernández','Portada',0),(3,3,'Daniel','Ortiz','Vallejuelo',0),(4,4,'Narcisa','de Miguel','González',0),(5,4,'Fabián','Gónzalez','Herrero',0);
 /*!40000 ALTER TABLE `Empleado` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -140,7 +140,7 @@ CREATE TABLE `Pedido` (
   KEY `idEmpleado` (`idEmpleado`),
   CONSTRAINT `Pedido_ibfk_1` FOREIGN KEY (`idCliente`) REFERENCES `Cliente` (`idCliente`),
   CONSTRAINT `Pedido_ibfk_2` FOREIGN KEY (`idEmpleado`) REFERENCES `Empleado` (`idEmpleado`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -214,4 +214,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-02-28  1:34:19
+-- Dump completed on 2019-06-05 12:15:50
